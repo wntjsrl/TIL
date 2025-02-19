@@ -1,6 +1,6 @@
-## 단축 평가, Truthy & Falsy
+## 단축 평가, Truthy & Falsy (2025.01.22)
 
-## 단축 평가
+#### 단축 평가
 
 - 논리 연산 결과가 확실할 때 나머지 평가를 건너뛰는 기능
 - 단축 평가를 사용하면 우리는 조금 더 파이썬스러운 코드를 작성할 수 있음
@@ -29,7 +29,7 @@ print(result)                                           # None 내장 함수는 
 
 ---
 
-## Truthy / Falsy
+#### Truthy / Falsy
 
 ```python
 # Truthy / Falsy
