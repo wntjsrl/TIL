@@ -117,13 +117,13 @@ alice.introduce() # 객체가 자신의 정보를 출력
 
 #### 3. 객체 예시
 
-<img src="image/0203/0203_2.png" alt="image" align="center">
-
 <img src="image/0203/0203_3.png" alt="image" align="center">
+
+<img src="image/0203/0203_4.png" alt="image" align="center">
 
 #### 4. 객체와 클래스
 
-<img src="image/0203/0203_4.png" alt="image" align="center">
+<img src="image/0203/0203_5.png" alt="image" align="center">
 
 #### 5. 객체 특징
 
@@ -207,7 +207,7 @@ p2.introduce() # "안녕하세요. 저는 Bella, 나이는 30살입니다."
 - 클래스(가수)와 인스턴스(아이유) → 타입
     - 클래스를 만든다는 말은 타입을 만든다는 말
         
-        <img src="image/0203/0203_5.png" alt="image" align="center">
+        <img src="image/0203/0203_6.png" alt="image" align="center">
         
 
 - 변수 name의 타입은 str 클래스
@@ -306,7 +306,7 @@ print(c2.pi) # 3.14
 2. 클래스 메서드
 3. 스태틱 메서드
 
-<img src="image/0203/0203_6.png" alt="image" align="center">
+<img src="image/0203/0203_7.png" alt="image" align="center">
 
 #### 3. 인스턴스 메서드 (Instance Method)
 
