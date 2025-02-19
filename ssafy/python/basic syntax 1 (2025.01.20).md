@@ -32,13 +32,13 @@
 #### 2. 파이썬 프로그램이 실행 과정
 - 컴퓨터는 기계어로 소통하기 때문에 사람이 기계어를 직접 작성하기 어려움
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/aa8839d0-cb32-4db5-b5c2-d7a641101d01/image.png)
+<img src="image/0120/0120_1.png" alt="image" align="center">
 <br/>
 
 - 인터프리터가 사용자의 명령어를 운영체제가 이해하는 언어로 바꿈
     - 훨씬 더 사용하기 쉽고 운영체제간 이식도 가능 (확장성)
   
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/e26f4869-d35a-4151-8f05-37c52bd480e9/image.png)
+<img src="image/0120/0120_2.png" alt="image" align="center">
 <br/>
 
 #### 3. 파이썬 인터프리터를 사용하는 2가지 방법
@@ -66,7 +66,7 @@
 - 표현식과 문장
     - 문장은 보통 여러 개의 표현식을 포함
   
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/839112ca-ddac-46aa-a62b-35f301405c1d/image.png)
+<img src="image/0120/0120_3.png" alt="image" align="center">
 <br/>
 
 #### 5. 연산자
@@ -148,21 +148,19 @@
 - 변수, 값 그리고 메모리
     - 거리에 집 주소가 있듯이
     - 메모리의 모든 위치에는 그 위치를 고유하게 식별하는 메모리 주소가 존재
-  
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/1a1aec73-00e6-4548-8032-920191f10023/image.png)
+   <img src="image/0120/0120_4.png" alt="image" align="center">
 <br/>
     
     - 객체 (Object)
         - 타입을 갖는 메모리 주소 내 값
         - “값이 들어있는 상자”
-      
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/1b00b3e5-ee91-4de4-b60d-7b064f114a35/image.png)
+      <img src="image/0120/0120_5.png" alt="image" align="center">
 <br/>
     
     - 변수는 그 변수가 참조하는 객체의 메모리 주소를 가짐
     - 변수 degrees는 값 36.5를 참조
   
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/01ca3771-6499-4293-97a3-a6c01421ec9c/image.png)
+    <img src="image/0120/0120_6.png" alt="image" align="center">
 <br/>
     
 ---
@@ -178,7 +176,7 @@
 - 타입은 2가지 요소로 이루어짐
     - “값”과 “값에 적용할 수 있는 연산”
   
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/27859d29-2083-4fd6-a054-3a77ebe36738/image.png)
+<img src="image/0120/0120_7.png" alt="image" align="center">
 <br/>
 
 #### 2. Data Types
@@ -422,7 +420,7 @@
                         - 시퀀스 내의 값들에 대한 고유한 번호로, 각 값의 위치를 식별하는 데 사용되는 숫자
                     - 문자열 hello의 인덱스
                   
-                    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/6f70ed05-c7e3-4192-b000-e8983621afab/image.png)
+                    <img src="image/0120/0120_8.png" alt="image" align="center">
                 <br/>
                 
                 - 슬라이싱 (Slicing)
@@ -434,21 +432,21 @@
                     my_str[2:4]
                     ```
                     
-                    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/204f9ef0-f8b3-4314-8ab9-bfca85462885/image.png)
+                    <img src="image/0120/0120_9.png" alt="image" align="center">
                   <br/><br/>
                     
                     ```python
                     my_str[:3]
                     ```
                     
-                    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/3d5142f8-4559-4aaf-abd1-ec1c05ceda10/image.png)
+                    <img src="image/0120/0120_10.png" alt="image" align="center">
                   <br/><br/>
                   
                     ```python
                     my_str[3:]
                     ```
                     
-                    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/fb29a84e-7ae5-47f7-a692-837c97e779b3/image.png)
+                    <img src="image/0120/0120_11.png" alt="image" align="center">
                   <br/><br/>
                     
                     - Step을 지정하여 추출 
@@ -456,7 +454,7 @@
                     my_str[0:5:2]
                     ```
                     
-                    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/2dd0237e-2524-421c-9988-4466927a9b79/image.png)
+                    <img src="image/0120/0120_12.png" alt="image" align="center">
                   <br/><br/>
 
                     - Step이 음수일 경우
@@ -464,7 +462,7 @@
                     my_str[::-1]
                     ```
                     
-                    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/f034b853-5b87-4c67-be9c-289a58329952/image.png)
+                    <img src="image/0120/0120_13.png" alt="image" align="center">
                   <br/><br/>
                     
             
@@ -612,7 +610,7 @@ print(age)
 ### 추가 학습
 
 #### 1. 파이썬 메모리 구조
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/3bcf0669-bdc6-49cb-bdae-7d0c10953473/image.png)
+<img src="image/0120/0120_14.png" alt="image" align="center">
 - Code(Text) Region
     - 실행할 프로그램의 코드 저장
     - CPU가 저장된 명령어를 하나씩 처리
@@ -633,9 +631,8 @@ print(age)
             - 먼저 넣은 것이 먼저 빠져나감
         - FIFO 구조의 대표적인 예
             - Queue
-       
-            ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/3900cc63-a93c-42cc-8398-c4d2d4892177/image.png)
-            
+           <img src="image/0120/0120_15.png" alt="image" align="center">
+           <br/>
     
 - Stack Region
     - 지역 변수(Local), 매개 변수(Param) 저장
@@ -647,8 +644,8 @@ print(age)
         - LIFO의 대표적인 예
             - Stack
          
-            ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/241aaad2-0344-4ec3-b4ee-f35f5b34fd36/66b9deda-4c8c-4ab0-a592-c2caa71a2e8b/image.png)
-            
+            <img src="image/0120/0120_16.png" alt="image" align="center">
+            <br/><br/>
 
 #### 2. 문자열 관련 함수
 - count
