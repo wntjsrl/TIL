@@ -170,7 +170,7 @@ kmp(t, p)
 
 <img src="image/0212/0212_7.png" alt="image" align="center">
 
-## 2. 보이어-무어 알고리즘을 이용한 예
+#### 2. 보이어-무어 알고리즘을 이용한 예
 
 <img src="image/0212/0212_8.png" alt="image" align="center">
 
