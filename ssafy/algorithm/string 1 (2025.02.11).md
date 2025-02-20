@@ -17,8 +17,8 @@
 
 <img src="image/0211/0211_1.png" alt="image" align="center">
 
-1. 혼동을 피하기 위해 표준안을 만들기로 함
-2. 1967년, 미국에서 ASCII(American Standard Code for Information Interchange)라는 문자 인코딩 표준이 제정됨
+3. 혼동을 피하기 위해 표준안을 만들기로 함
+4. 1967년, 미국에서 ASCII(American Standard Code for Information Interchange)라는 문자 인코딩 표준이 제정됨
 
 #### 3. ASCII Code
 
