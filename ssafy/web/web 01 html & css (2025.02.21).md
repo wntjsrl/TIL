@@ -470,19 +470,15 @@ h1{
 h2{
     color: darkviolet !important;
 }
-
 p{
     color: blue;
 }
-
 .orange{
     color: orange;
 }
-
 .green{
     color: green;
 }
-
 #red{
     color: red;
 }
@@ -661,7 +657,6 @@ span,
 img{
     border: 3px solid red;
 }
-
 h1,
 p,
 div{
