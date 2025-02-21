@@ -633,7 +633,7 @@ p{
 <h1>Normal flow</h1>
 <p>Lorem, ipsum dolor sit amet consect explicabo?</p>
 <div>
-	    <p>block 요소는 기본적으로 부모 요소의 너비 100%를 차지하며, 자식 콘텐츠의 최대 높이를 취한다.</p>
+    <p>block 요소는 기본적으로 부모 요소의 너비 100%를 차지하며, 자식 콘텐츠의 최대 높이를 취한다.</p>
     <p>block 요소의 총 너비와 총 높이는 content + padding + border width/height다.</p>
 </div>
 <p>block 요소는 서로 margins로 구분된다.</p>
