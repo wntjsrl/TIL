@@ -57,7 +57,6 @@
 ```html
 <h1>HTML</h1>
 <p>HTML이란 Hyper Text Markup Language 의 약자이다.</p>
-
 <h2>Hyper Text</h2>
 <p>Hyper Text 란 기존의 선형적인 텍스트가 아닌 비 선형적으로 이루어진 텍스트를
 의미하며, 이는 인터넷의 등장과 함께 대두되었다. 기본적으로 Hyper Link를 통해
@@ -65,7 +64,6 @@
 <p>이러한 Hyper Text 는 인간이 기억하는 방식까지 바꾸고 있는데 이를
 컬럼비아대 벳시 스패로 교수팀은 구글 효과(Google Effect) 라고 이름 붙이고, 해당
 연구를 '사이언스' 지에 게재하였다.</p>
-
 <h2>구글 효과(Google Effect)</h2>
 <p>구글 효과란...</p>
 ```
