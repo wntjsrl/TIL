@@ -166,9 +166,10 @@
         - 최선 버전 / 특정 버전 / 최소 버전을 명시하여 설치할 수 있음
         
         ```python
-        # pip install <패키지 명 또는 모듈 명>
         # 해당 패키지 설치
-        # 패키지 버전 지정 안 하면 최신 버전 설치
+        """
+        패키지 버전 지정 안 하면 최신 버전 설치
+        """
         pip install SomePackage
         
         # 지정한 패키지 버전 설치
@@ -177,16 +178,16 @@
         # 지정한 패키지 버전이 없으면 그 이상의 버전으로 설치
         pip install SomePackage>=1.0.4
         
-        # pip uninstall <패키지 명>
         # 해당 패키지 삭제
+        pip uninstall SomePackage
         ```
         
     
     - requests 외부 패키지 설치 및 사용 예시
     
     ```python
-    # pip list
     # 설치된 패키지 목록 및 버전 확인
+    pip list
     
     # requests 외부 패키지 설치
     pip install requests
