@@ -1,234 +1,315 @@
 ## Web 02 CSS Layout (2025.02.25)
 
-### 웹
+### 박스 구성 요소
 
-#### 1. 웹
+#### 1. CSS Box Model
 
-- Web site, Web application 등을 통해 사용자들이 정보를 검색하고, 상호 작용하는 기술
-- Web site
-    - 인터넷에서 여러 개의 Web page가 모인 것으로, 사용자들에게 정보나 서비스를 제공하는 공간
-- Web page
-    - HTML, CSS 등의 웹 기술을 이용하여 만들어진 “Web site”를 구성하는 하나의 요소
-- World Wide Web
-    - 인터넷으로 연결된 컴퓨터들이 정보를 공유하는 거대한 정보 공간
+- 웹 페이지의 모든 HTML 요소를 감싸는 사각형 상자 모델
+- 내용(Content), 안쪽 여백(Padding), 테두리(Border), 외부 간격(Margin)으로 구성되어 요소의 크기와 배치를 결정
 
-#### 2. Web page 구성 요소
+#### 2. Box 구성 요소
 
-<img src="image/0221/0221_1.png" alt="image" align="center">
+- Content box
+    - 실제 콘텐츠가 표시되는 영역 크기
+    - width 및 height 속성을 사용하여 크기 조정
+- Padding box
+    - 콘텐츠 주위에 공백
+    - padding 관련 속성을 사용하여 크기 조정
+- Border box
+    - 콘텐츠와 패딩을 래핑
+    - border 관련 속성을 사용하여 크기 조정
+- Margin box
+    - 콘텐츠, 패딩 및 테두리를 래핑
+    - 박스와 다른 요소 사이의 공백
+    - margin 관련 속성을 사용하여 크기 조
 
-<img src="image/0221/0221_2.png" alt="image" align="center">
+<img src="image/0225/0225_1.png" alt="image" align="center">
 
----
+#### 3. Box 구성의 방향 별 속성 값
 
-### 웹 구조화
+<img src="image/0225/0225_2.png" alt="image" align="center">
 
-#### 1. HTML (HyperText Markup Language)
+#### 4. Box 구성 요소 예시
 
-- 웹 페이지의 의미와 구조를 정의하는 언어
-
-#### 2. Hypertext
-
-- 웹 페이지를 다른 페이지로 연결하는 링크
-- 참조를 통해 사용자가 한 문서에서 다른 문서로 즉시 접근할 수 있는 텍스트
-
-<img src="image/0221/0221_3.png" alt="image" align="center">
-
-#### 3. Hypertext 특징
-
-- 비선형성
-- 상호연결성
-- 사용자 주도적 탐색
-
-#### 4. Markup Language
-
-- 태그 등을 이용하여 문서나 데이터의 구조를 명시하는 언어
-- 예
-    - HTML
-    - Markdown
-
-#### 5. Markup Language 예시
-
-<img src="image/0221/0221_4.png" alt="image" align="center">
-
-<img src="image/0221/0221_5.png" alt="image" align="center">
-
-<img src="image/0221/0221_6.png" alt="image" align="center">
-
-```html
-<h1>HTML</h1>
-<p>HTML이란 Hyper Text Markup Language 의 약자이다.</p>
-<h2>Hyper Text</h2>
-<p>Hyper Text 란 기존의 선형적인 텍스트가 아닌 비 선형적으로 이루어진 텍스트를
-의미하며, 이는 인터넷의 등장과 함께 대두되었다. 기본적으로 Hyper Link를 통해
-텍스트를 이동한다.</p>
-<p>이러한 Hyper Text 는 인간이 기억하는 방식까지 바꾸고 있는데 이를
-컬럼비아대 벳시 스패로 교수팀은 구글 효과(Google Effect) 라고 이름 붙이고, 해당
-연구를 '사이언스' 지에 게재하였다.</p>
-<h2>구글 효과(Google Effect)</h2>
-<p>구글 효과란...</p>
-```
-
----
-
-### Structure of HTML
-
-#### 1. HTML 구조
-
-```html
-<!-- 해당 문서가 html로 문서라는 것을 나타냄 -->
-<!DOCTYPE html>
-<!-- 전체 페이지의 콘텐츠를 포함 -->
-<html lang="en">
-<!-- HTML 문서에 관련된 설명, 설정 등 컴퓨터가 식별하는 메타데이터를 작성 -->
-<!-- 사용자에게 보이지 않음 -->
-<head>
-    <meta charset="UTF-8">
-    <!-- 브라우저 탭 및 즐겨찾기 시 표시되는 제목으로 사용 -->
-    <title>My page</title>
-</head>
-<!-- HTML 문서의 내용을 나타냄 -->
-<!-- 페이지에 표시되는 모든 콘텐츠를 작성 -->
-<!-- 한 문서에 하나의 body 요소만 존재 -->
-<body>
-    <p>This is my page</p>
-</body>
-</html>
-```
-    
-
-#### 2. HTML Element (요소)
-
-- 하나의 요소는 여는 태그와 닫는 태그 그리고 그 안의 내용으로 구성됨
-- 닫는 태그는 태그 이름 앞에 슬래시가 포함됨
-    - 닫는 태그가 없는 태그도 존재
-    
-    <img src="image/0221/0221_7.png" alt="image" align="center">
-    
-
-#### 3. HTML Attributes (속성)
-
-- 사용자가 원하는 기준에 맞도록 요소를 설정하거나 다양한 방식으로 요소의 동작을 조절하기 위한 값
-- 목적
-    - 나타내고 싶지 않지만 추가적인 기능, 내용을 담고 싶을 때 사용
-    - CSS에서 스타일 적용을 위해 해당 요소를 선택하기 위한 값으로 활용됨
-    
-    <img src="image/0221/0221_8.png" alt="image" align="center">
-    
-
-#### 4. HTML Attributes(속성) 작성 규칙
-
-1. 속성은 요소 이름과 속성 사이에 공백이 있어야 함
-2. 하나 이상의 속성들이 있는 경우엔 속성 사이에 공백으로 구분함
-3. 속성 값은 열고 닫는 따옴표로 감싸야 함
-
-<img src="image/0221/0221_9.png" alt="image" align="center">
-
-#### 5. HTML 구조 예시
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My page</title>
-</head>
-<body>
-    <p>This is my page</p>
-    <a href="https://www.google.co.kr">Google</a>
-    <img src="images/sample.png" alt="sample-img">
-    <img src="https://random.imagecdn.app/500/150" alt="sample-img">
-</body>
-</html>
-```
-
-- 웹 페이지의 HTML 코드는 크롬 개발자 도구에서 확인 가능
-
-<img src="image/0221/0221_10.png" alt="image" align="center">
-
----
-
-### Text Structure
-
-#### 1. 웹 구조화
-
-- HTML Text structure
-    - HTML의 주요 목적 중 하나는 텍스트 구조와 의미를 제공하는 것
-- 예를 들어 h1 요소는 단순히 텍스트를 크게만 만드는 것이 아닌, 현재 문서의 최상위 제목이라는 의미를 부여하는 것
-
-```html
-<h1>Heading</h1>
-```
-
-#### 2. 대표적인 HTML Text structure
-
-```html
-1. Heading & Paragraphs
- - h1
- - h2
- - h3
- - h4
- - h5
- - h6
- - P
-
-2. List
- - ol
- - ul
- - li
- 
-3. Emphasis & Importance
- - em
- - strong
-```
-
-#### 3. HTML Text structure 예시
+<img src="image/0225/0225_3.png" alt="image" align="center">
 
 ```html
 <body>
-    <h1>Main Heading</h1>
-    <h2>Sub Heading</h2>
-    <p>This is my page</p>
-    <p>This is <em>emphasis</em></p>
-    <p>Hi <strong>my name</strong> is Air</p>
-    <ol>
-        <li>파이썬</li>
-        <li>알고리즘</li>
-        <li>웹웹</li>
-    </ol>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
 </body>
 ```
-
----
-
-### 웹 스타일링
-
-#### 1. CSS (Cascading Style Sheet)
-
-- 웹 페이지의 디자인과 레이아웃을 구성하는 언어
-
-#### 2. CSS 구문
-
-<img src="image/0221/0221_11.png" alt="image" align="center">
 
 ```css
-h1{
-    color: red;
-    font-size: 30px;
+.box1{
+    width: 200px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    margin-left: 25px;
+    margin-top: 50px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+}
+.box2{
+    width: 200px;
+    padding: 25px 50px;
+    margin: 25px auto;
+    border: 1px dashed black;
 }
 ```
 
-#### 3. CSS 적용 방법
+---
 
-1. 인라인(Inline) 스타일
-    1. HTML 요소 안에 style 속성 값으로 작성
-    
-    ```html
-    <h1 style="color: blue; background-color: yellow;">Hello World!</h1>
-    ```
-    
+### shorthand 속성
 
-1. 내부(Internal) 스타일 시트
-    1. head 태그 안에 style 태그에 작성
+#### 1. shorthand 속성 - ‘border’
+
+- border-width, border-style, border-color를 한 번에 설정하기 위한 속성
+
+```css
+/* 작성 순서는 영향을 주지 않음 */
+border: 2px solid black;
+```
+
+#### 2. shorthand 속성 - ‘margin’ & ‘padding’
+
+- 4방향의 속성을 각각 지정하지 않고 한 번에 지정할 수 있는 속성
+
+```css
+/* 4개 - 상우하좌 */
+margin: 10px 20px 30px 40px;
+padding: 10px 20px 30px 40px;
+
+/* 3개 - 상/좌우/하 */
+margin: 10px 20px 30px;
+padding: 10px 20px 30px;
+
+/* 2개 - 상하/좌우 */
+margin: 10px 20px;
+padding: 10px 20px;
+
+/* 1개 - 공통 */
+margin: 10px;
+padding: 10px;
+```
+
+---
+
+### box-sizing 속성
+
+#### 1. The Standard CSS Box Model
+
+- 표준 상자 모델에서 width와 height 속성 값을 설정하면 이 값은 content box의 크기를 조정하게 됨
+- CSS는 border box가 아닌 content box의 크기를 width 값으로 지정
+- 참고 자료
+    - https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#outer_display_type
+- 실제 박스 크기는 350px이 아닌 테두리, 패딩 값을 모두 더한 값을 가짐
+
+<img src="image/0225/0225_4.png" alt="image" align="center">
+
+<img src="image/0225/0225_5.png" alt="image" align="center">
+
+```css
+*{
+    box-sizing: content-box;
+}
+```
+
+#### 2. The Alternative CSS Box Model
+
+- 대체 상자 모델에서 모든 width와 height는 실제 상자의 너비
+- 실제 박스 크기를 정하기 위해 테두리와 패딩을 조정할 필요 없음
+
+<img src="image/0225/0225_6.png" alt="image" align="center">
+
+<img src="image/0225/0225_7.png" alt="image" align="center">
+
+```css
+*{
+    box-sizing: border-box;
+}
+```
+
+#### 3. box-sizing 예시
+
+<img src="image/0225/0225_8.png" alt="image" align="center">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="box content-box">content-box</div>
+    <div class="box border-box">border-box</div>
+</body>
+</html>
+```
+
+```css
+.box{
+    width: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px;
+    background-color: yellow;
+}
+.content-box{
+    /* box-sizing: content-box; */
+}
+.border-box{
+    /* box-sizing: border-box; */
+}
+```
+
+---
+
+### 기타 Display 속성
+
+#### 1. inline-block
+
+- inline과 block 요소 사이의 중간 지점을 제공하는 display 값
+- width 및 height  속성 사용 가능
+- padding, margin 및 border로 인해 다른 요소가 상자에서 밀려남
+- 새로운 행으로 넘어가지 않음
+- 요소가 줄 바꿈 되는 것을 원하지 않으면서 너비와 높이를 적용하고 싶은 경우에 사용
+
+<img src="image/0225/0225_9.png" alt="image" align="center">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. 이제 다른 요소를 밀어낼 수 있는 span -->
+    <p>Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Animi iusto enim officia exercitationem
+        dolorque, quasi velit, dolores, tempora illum odio necessitatibus. Fugit,
+        cumque eligendi!</p>
+
+    <!-- 2. 리스트 요소를 가로로 정렬 -->
+    <ul>
+        <li><a href="#">link</a></li>
+        <li><a href="#">link</a></li>
+        <li><a href="#">link</a></li>
+    </ul>
+
+    <!-- 3. div 요소를 가로로 정렬 -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+```
+
+```css
+span{
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    display: inline-block;
+}
+ul > li{
+    background-color: crimson;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.container{
+    text-align: center;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    margin: 10px;
+    display: inline-block;
+}
+```
+
+#### 2. none
+
+- 요소를 화면에 표시하지 않고, 공간조차 부여되지 않음
+
+<img src="image/0225/0225_10.png" alt="image" align="center">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box none"></div>
+</body>
+</html>
+```
+
+```css
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+}
+.none{
+    display: none;
+}
+```
+
+---
+
+### CSS Position
+
+#### 1. CSS Layout
+
+- 각 요소의 위치와 크기를 조정하여 웹 페이지의 디자인을 결정하는 것
+- Display, Position, Flexbox 등
+
+#### 2. CSS Position
+
+- 요소를 Normal Flow에서 제거하여 다른 위치로 배치하는 것
+- 다른 요소 위에 올리기, 화면의 특정 위치에 고정시키기 등
+
+#### 3. Position 이동 방향
+
+<img src="image/0225/0225_11.png" alt="image" align="center">
+
+#### 4. Position 유형
+
+1. static
+    1. 요소를 Normal Flow에 따라 배치
+    2. top, right, bottom, left 속성이 적용되지 않음
+    3. 기본 값
+2. relative
+    1. 요소를 Normal Flow에 따라 배치
+    2. 자신의 원래 위치(static)을 기준으로 이동
+    3. top, right, bottom, left 속성으로 위치를 조정
+    4. 다른 요소의 레이아웃에 영향을 주지 않음
+        1. 요소가 차지하는 공간은 static일 때와 같음
+3. absolute
+    1. 요소를 Normal Flow에서 제거
+    2. 가장 가까운 relative 부모 요소를 기준으로 이동
+        1. 만족하는 부모 요소가 없다면 body 태그를 기준으로 함
+    3. top, right, bottom, left 속성으로 위치를 조정
+    4. 문서에서 요소가 차지하는 공간이 없어짐
     
     ```html
     <!DOCTYPE html>
@@ -237,22 +318,106 @@ h1{
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <style>
-            h1{
-                color: blue;
-                background-color: yellow;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="card">
+            <div class="card-content">
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <span class="badge">New</span>
+            </div>
+        </div>
     </body>
     </html>
     ```
     
+    ```css
+    .card{
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+    }
+    .card-content{
+        padding: 10px;
+    }
+    .badge{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+    }
+    ```
+    
 
-1. 외부(External) 스타일 시트
-- 별도 CSS 파일 생성 후 HTML link 태그를 사용해 불러오기
+1. fixed
+    1. 요소를 Normal Flow에서 제거
+    2. 현재 화면영역(viewport)을 기준으로 이동
+    3. 스크롤해도 항상 같은 위치에 유지됨
+    4. top, right, bottom, left 속성으로 위치를 조정
+    5. 문서에서 요소가 차지하는 공간이 없어짐
+2. sticky
+    1. relative와 fixed의 특성을 결합한 속성
+    2. 스크롤 위치가 임계점에 도달하기 전에는 relative처럼 동작
+    3. 스크롤 특정 임계점에 도달하면 fixed처럼 동작하여 화면에 고정됨
+    4. 만약 다음 sticky 요소가 나오면 다음 sticky 요소가 이전 sticky 요소의 자리르 대체
+        1. 이전 sticky 요소가 고정되어 있던 위치와 다음 sticky 요소가 고정되어야 할 위치가 겹치게 되기 때문
+        
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <h1>Sticky positioning</h1>
+            <div>
+                <div class="sticky">첫 번째 Sticky</div>
+                <div>
+                    <p>내용1</p>
+                    <p>내용2</p>
+                    <p>내용3</p>
+                </div>
+                <div class="sticky">두 번째 Sticky</div>
+                <div>
+                    <p>내용4</p>
+                    <p>내용5</p>
+                    <p>내용6</p>
+                </div>
+                <div class="sticky">세 번째 Sticky</div>
+                <div>
+                    <p>내용7</p>
+                    <p>내용8</p>
+                    <p>내용9</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        ```
+        
+        ```css
+        body{
+            height: 1500px;
+        }
+        .sticky{
+            position: sticky;
+            top: 0;
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        ```
+        
+
+#### 4. Position 활용
+
+<img src="image/0225/0225_12.png" alt="image" align="center">
 
 ```html
 <!DOCTYPE html>
@@ -260,474 +425,685 @@ h1{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box absolute">Absolute</div>
+        <div class="box relative">Relative</div>
+        <div class="box fixed">Fixed</div>
+    </div>
 </body>
 </html>
 ```
 
 ```css
-/* style.css */
-h1{
-    color: blue;
-    background-color: yellow;
+*{
+    box-sizing: border-box;
 }
-```
-
-#### 4. CSS Selectors
-
-- HTML 요소를 선택하여 스타일을 적용할 수 있도록 하는 선택자
-
-#### 5. CSS Selectors 종류
-
-- 기본 선택자
-    - 전체(*) 선택자
-        - HTML 모든 요소를 선택
-    - 요소(tag) 선택자
-        - 지정한 모든 태그를 선택
-    - 클래스(class) 선택자 (’.’ (dot))
-        - 주어진 클래스 속성을 가진 모든 요소를 선택
-    - 아이디(id) 선택자 (’#’)
-        - 주어진 아이디 속성을 가진 요소 선택
-        - 문서에는 주어진 아이디를 가진 요소가 하나만 있어야 함
-    - 속성(attr) 선택자 등
-
-#### 6. CSS Selectors 예시
-
-```html
-<body>
-    <h1 class="green">Heading</h1>
-    <h2>선택자 연습</h2>
-    <h3>Hello</h3>
-    <h4>Nice to meet you</h4>
-    <p id="purple">과목 목록</p>
-    <ul class="green">
-        <li>파이썬</li>
-        <li>알고리즘</li>
-        <li>웹
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>PYTHON</li>
-            </ol>
-        </li>
-    </ul>
-    <p 
-    class="green">Lorem, <span>ipsum</span> dolor</p>
-</body>
-```
-
-```css
-<style>
-    /* 전체 선택자 */
-    *{
-        color: red;
-    }
-    
-    /* 타입 선택자 */
-    h2{
-        color: orange;
-    }
-    h3,
-    h4{
-        color: blue;
-    }
-    
-    /* 클래스 선택자 */
-    .green{
-        color: green;
-    }
-
-    /* id 선택자 */
-    #purple{
-        color: purple;
-    }
-</style>
-```
-
-<img src="image/0221/0221_12.png" alt="image" align="center">
-
-#### 7. CSS 결합자(Combinators) 종류
-
-- 자손 결합자 (” “ (space))
-    - 첫 번째 요소의 자손 요소들 선택
-    - 예
-        - p span은 <p> 안에 있는 모든 <span>를 선택 (하위 레벨 상관 없이)
-- 자식 결합자 (”>”)
-    - 첫 번째 요소의 직계 자식만 선택
-    - 예
-        - ul > li은 <ul> 안에 있는 모든 <li>를 선택 (한단계 아래 자식들만)
-
-#### 8. CSS 결합자 예시
-
-```html
-<body>
-    <h1 class="green">Heading</h1>
-    <h2>선택자 연습</h2>
-    <h3>Hello</h3>
-    <h4>Nice to meet you</h4>
-    <p id="purple">과목 목록</p>
-    <ul class="green">
-        <li>파이썬</li>
-        <li>알고리즘</li>
-        <li>웹
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>PYTHON</li>
-            </ol>
-        </li>
-    </ul>
-    <p class="green">Lorem, <span>ipsum</span> dolor</p>
-</body>
-```
-
-```css
-<style>
-    /* 전체 선택자 */
-    *{
-        color: red;
-    }
-    
-    /* 타입 선택자 */
-    h2{
-        color: orange;
-    }
-    h3,
-    h4{
-        color: blue;
-    }
-    
-    /* 클래스 선택자 */
-    .green{
-        color: green;
-    }
-
-    /* id 선택자 */
-    #purple{
-        color: purple;
-    }
-
-    /* 자식 결합자 */
-    .green > span{
-        font-size: 50px;
-    }
-
-    /* 자손 결합자 */
-    .green li{
-        color: brown;
-    }
-</style>
-```
-
-<img src="image/0221/0221_13.png" alt="image" align="center">
-
-#### 9. 명시도 (Specificity)
-
-- 결과적으로 요소에 적용할 CSS 선언을 결정하기 위한 알고리즘
-- CSS Selector에 가중치를 계산하여 어떤 스타일을 적용할지 결정
-    - 동일한 요소를 가리키는 2개 이상의 CSS 규칙이 있는 경우, 가장 높은 명시도를 가진 Selector가 승리하여 스타일이 적용됨
-
-#### 10. Cascade (계단식)
-
-- 한 요소에 동일한 가중치를 가진 선택자가 적용될 때, CSS에서 마지막에 나오는 선언이 사용됨
-
-#### 11. 명시도가 높은 순
-
-```css
-1. Importance
- - !important
- - 다른 우선순위 규칙보다 우선하여 적용하는 키워드
- - Cascade의 구조를 무시하고 강제로 스타일을 적용하는 방식이므로 사용을 권장하지 않음
-
-2. Inline 스타일
-
-3. 선택자
- - id 선택자 > class 선택자 > 요소 선택자
-
-4. 소스 코드 선언 순서
-```
-
-#### 12. 명시도 예시
-
-```html
-<p>1</p>
-<p class="orange">2</p>
-<p class="green orange">3</p>
-<p class="orange green">4</p>
-<p id="red" class="orange">5</p>
-<h2 id="red" class="orange">6</h2>
-<p id="red" class="orange" style="color: brown;">7</p>
-<h2 id="red" class="orange" style="color: brown;">8</h2>
-```
-
-```css
-h2{
-    color: darkviolet !important;
+body{
+    height: 1500px;
 }
-p{
-    color: blue;
-}
-.orange{
-    color: orange;
-}
-.green{
-    color: green;
-}
-#red{
-    color: red;
-}
-```
-
-<img src="image/0221/0221_14.png" alt="image" align="center">
-
----
-
-### 상속
-
-#### 1. CSS 상속
-
-- 기본적으로 CSS는 상속을 통해 부모 요소의 속성을 자식에게 상속해 재사용성을 높임
-
-#### 2. CSS 속성 2가지 분류
-
-- 상속되는 속성
-    - Text 관련 요소
-        - font
-        - color
-        - text-align
-    - opacity
-    - visibility 등
-- 상속되지 않는 속성 (레이아웃에 관련된 것들)
-    - Box model 관련 요소
-        - width
-        - height
-        - border
-        - box-sizing 등
-    - position 관련 요소
-        - position
-        - top/right/bottom/left
-        - z-index 등
-
-#### 3. 상속 예시
-
-```html
-<ul class="parent">
-    <li class="child">Hello</li>
-    <li class="child">Bye</li>
-</ul>
-```
-
-```css
-.parent{
-    /* 상속 O */
-    color: red;
-
-    /* 상속 X */
+.container{
+    position: relative;
+    height: 300px;
+    width: 300px;
     border: 1px solid black;
 }
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+.static{
+    position: static;
+    background-color: lightcoral;
+}
+.absolute{
+    position: absolute;
+    background-color: lightgreen;
+    top: 100px;
+    left: 100px;
+}
+.relative{
+    position: relative;
+    background-color: lightblue;
+    top: 100px;
+    left: 100px;
+}
+.fixed{
+    position: fixed;
+    background-color: gray;
+    top: 0;
+    right: 0;
+}
 ```
-
-<img src="image/0221/0221_15.png" alt="image" align="center">
-
-#### 4. CSS 상속 여부 확인
-
-- MDN의 각 속성별 문서 하단에서 상속 여부를 확인할 수 있음
-
-<img src="image/0221/0221_16.png" alt="image" align="center">
 
 ---
 
-### CSS Box Model
+### z-index
 
-#### 1. CSS Box Model
+#### 1. z-index
 
-- 웹 페이지의 모든 HTML 요소를 감싸는 사각형 상자 모델
-- 원은 네모 박스를 깎은 것
+- 요소의 쌓임 순서(stack order)를 정의하는 속성
+- 정수 값을 사용해 z축 순서를 지정
+- 값이 클수록 요소가 위에 쌓이게 됨
+- static이 아닌 요소에만 적용됨
 
-<img src="image/0221/0221_17.png" alt="image" align="center">
+#### 2. z-index 특징
 
-- 박스로 구성된 웹 페이지 레이아웃
+- 기본 값은 auto
+- 부모 요소의 z-index 값에 영향을 받음
+- 같은 부모 내에서만 z-index 값을 비교
+- 부모의 z-index가 낮으면 자식의 z-index가 아무리 높아도 부모보다 위로 올라갈 수 없음
+- z-index 값이 같으면 HTML 문서 순서대로 쌓임
 
-<img src="image/0221/0221_18.png" alt="image" align="center">
+#### 3. z-index 예시
 
-#### 2. 박스 타입
+<img src="image/0225/0225_13.png" alt="image" align="center">
 
-1. Block box
-2. Inline box
-- 박스 타입에 따라 페이지에서의 배치 흐름 및 다른 박스와 관련하여 박스가 동작하는 방식이 달라짐
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box red">z-index: 3</div>
+        <div class="box green">z-index: 2</div>
+        <div class="box blue">z-index: 1</div>
+    </div>
+</body>
+</html>
+```
 
-#### 3. 박스 표시(Display) 타입
+```css
+.container{
+    position: relative;
+}
+.box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.red{
+    background-color: red;
+    top: 50px;
+    left: 50px;
+    z-index: 3;
+}
+.green{
+    background-color: green;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+}
+.blue{
+    background-color: blue;
+    top: 150px;
+    left: 150px;
+    z-index: 1;
+}
+```
 
-1. Outer display type
-    1. 박스가 문서 흐름에서 어떻게 동작할지를 결정
-    2. 속성
-        1. block
-            1. 항상 새로운 행으로 나뉨
-            2. width와 height 속성 사용 가능
-            3. padding, margin, border로 인해 다른 요소를 상자로부터 밀어냄
-            4. width 속성을 지정하지 않으면 박스는 inline 방향으로 사용 가능한 공간을 모두 차지함
-                1. 상위 컨테이너 너비 100%로 채우는 것
-            5. 대표적인 block 타입 태그
-                1. h1
-                2. h2
-                3. h3
-                4. h4
-                5. h5
-                6. h6
-                7. p
-                8. div
-        2. inline
-            1. 새로운 행으로 넘어가지 않음
-            2. width와 height 속성을 사용할 수 없음
-            3. 수직 방향
-                1. padding, margin, border가 적용되지만 다른 요소를 밀어낼 수는 없음
-            4. 수평 방향
-                1. padding, margin, border가 적용되어 다른 요소를 밀어낼 수 있음
-            5. 대표적인 inline 타입 태그
-                1. a
-                2. img
-                3. span
-                4. strong
-                5. em
-                
-                ```css
-                /* Block */
-                .index{
-                    display: block;
-                }
-                
-                /* Inline */
-                .index{
-                    display: inline;
-                }
-                ```
-                
+#### 4. Position의 목적
+
+- 전체 페이지에 대한 레이아웃을 구성하는 것보다는 페이지 특정 항목의 위치를 조정하는 것
+
+---
+
+### CSS Flexbox
+
+#### 1. CSS Flexbox
+
+- 요소를 행과 열 형태로 배치하는 1차원 레이아웃 방식
+    - ‘공간 배열’ & ‘정렬’
+- 요소를 행과 열 형태로 배치하는 1차원 레이아웃 방식
+
+<img src="image/0225/0225_14.png" alt="image" align="center">
+
+#### 2. Flexbox 구성 요소
+
+1. Main Axis (주 축)
+    1. Flex Item들이 배치되는 기본 축
+    2. Main Start에서 시작하여 Main End 방향으로 배치 (기본 값)
+2. Cross Axis (교차 축)
+    1. Main Axis에 수직인 축
+    2. Cross Start에서 시작하여 Cross End 방향으로 배치 (기본 값)
+3. Flex Container
+    1. display: flex; 혹은 display: inline-flex;가 설정된 부모 요소
+    2. 이 컨테이너의 1차 자식 요소들이 Flex Item이 됨
+    3. Flexbox 속성 값들을 사용하여 자식 요소 Flex Item들을 배치하는 주체
+4. Flex Item
+    1. Flex Container 내부에 레이아웃 되는 항목
+
+<img src="image/0225/0225_15.png" alt="image" align="center">
+
+#### 3. Flexbox 속성 목록
+
+- Flex Container 관련 속성
+    - display
+    - flex-direction
+    - flex-wrap
+    - justify-content
+    - align-item
+    - align-content
+- Flex Item 관련 속성
+    - align-self
+    - flex-grow
+    - flex-basis
+    - order
+
+#### 4. Flexbox 속성
+
+1. Flex Container 지정
+    1. Flex Item은 기본적으로 행(주 축의 기본 값인 가로 방향)으로 나열
+    2. Flex Item은 주 축의 시작 선에서 시작
+    3. Flex Item은 교차 축의 크기를 채우기 위해 늘어남
     
-2. Inner display type
-    1. 박스 내부의 요소들이 어떻게 배치될지를 결정
-    2. 속성
-        1. flex
-    3. 추후 CSS layout - Flexbox에서 진행 예정
+    <img src="image/0225/0225_16.png" alt="image" align="center">
+    
+2. flex-direction
+    1. Flex Item이 나열되는 방향을 지정
+    2. column으로 지정할 경우 주 축이 변경됨
+    3. “-reverse”로 지정하면 Flex Item 배치의 시작 선과 끝 선이 서로 바뀜
+    
+    <img src="image/0225/0225_17.png" alt="image" align="center">
+    
+3. flex-wrap
+    1. Flex Item 목록이 Flex Container의 한 행에 들어가지 않을 경우, 다른 행에 배치할지 여부 설정
+    
+    <img src="image/0225/0225_18.png" alt="image" align="center">
+    
+4. justify-content
+    1. 주 축을 따라 Flex Item과 주위에 공간을 분배
+    
+    <img src="image/0225/0225_19.png" alt="image" align="center">
+    
+5. align-content
+    1. 교차 축을 따라 Flex Item과 주위에 공간을 분배
+    2. flex-wrap이 wrap 또는 wrap-reverse로 설정된 여러 행에만 적용됨
+    3. 한 줄 짜리 행에는 효과 없음 (flex-wrap이 nowrap으로 설정된 경우)
+    
+    <img src="image/0225/0225_20.png" alt="image" align="center">
+    
+6. align-items
+    1. 교차 축을 따라 Flex Item 행을 정렬
+    
+    <img src="image/0225/0225_21.png" alt="image" align="center">
+    
+7. align-self
+    1. 교차 축을 따라 개별 Flex Item을 정렬
+    
+    <img src="image/0225/0225_22.png" alt="image" align="center">
+    
+8. flex-grow
+    1. 남는 행 여백을 비율에 따라 각 Flex Item에 분배
+        1. 아이템이 컨테이너 내에서 확장하는 비율을 지정
+        2. flex-grow의 반대는 flex-shrink
+        
+        <img src="image/0225/0225_23.png" alt="image" align="center">
+        
+        <img src="image/0225/0225_24.png" alt="image" align="center">
+        
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="container">
+                <div class="item item-1">1</div>
+                <div class="item item-2">2</div>
+                <div class="item item-3">3</div>
+            </div>
+        </body>
+        </html>
+        ```
+        
+        ```css
+        .container{
+            display: flex;
+            width: 100%;
+        }
+        .item{
+            height: 100px;
+            color: white;
+            font-size: 3rem;
+        }
+        .item-1{
+            background-color: red;
+            /* flex-grow: 1; */
+        }
+        .item-2{
+            background-color: green;
+            /* flex-grow: 2; */
+        }
+        .item-3{
+            background-color: blue;
+            /* flex-grow: 3; */
+        }
+        ```
+        
+9. flex-basis
+    1. Flex Item의 초기 크기 값을 지정
+    2. flex-basis와 width 값을 동시에 적용한 경우 flex-basis가 우선
+    
+    <img src="image/0225/0225_25.png" alt="image" align="center">
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+        </div>
+    </body>
+    </html>
+    ```
     
     ```css
-    /* Flexbox */
     .container{
         display: flex;
+        width: 100%;
+    }
+    .item{
+        height: 100px;
+        color: white;
+        font-size: 3rem;
+    }
+    .item-1{
+        background-color: red;
+        /* flex-basis: 300px; */
+    }
+    .item-2{
+        background-color: green;
+        /* flex-basis: 600px; */
+    }
+    .item-3{
+        background-color: blue;
+        /* flex-basis: 300px; */
     }
     ```
     
 
-#### 4. Normal flow
-
-- 일반적인 흐름 또는 레이아웃을 변경하지 않은 경우, 웹 페이지 요소가 배치되는 방식
-
-<img src="image/0221/0221_19.png" alt="image" align="center">
-
-#### 5. Normal flow 예시
+#### 5. Flexbox 예제
 
 ```html
-<h1>Normal flow</h1>
-<p>Lorem, ipsum dolor sit amet consect explicabo?</p>
-<div>
-    <p>block 요소는 기본적으로 부모 요소의 너비 100%를 차지하며, 자식 콘텐츠의 최대 높이를 취한다.</p>
-    <p>block 요소의 총 너비와 총 높이는 content + padding + border width/height다.</p>
-</div>
-<p>block 요소는 서로 margins로 구분된다.</p>
-<p>inline 요소는 <span>이 것처럼</span> 자체 콘텐츠의 너비와 높이만 차지한다.
-    그리고 inline 요소는 <a href="#">width나 height 속성을 지정할 수 없다.</a>
-</p>
-<p>
-    물론 이미지도 <img src="#"> 인라인 요소다.
-    단, 이미지는 다른 inline 요소와 달리 width나 height로 크기를 조정할 수 있다.
-</p>
-<p>
-    만약 inline 요소의 크기를 제어하려면 block 요소로 변경하거나 inline-block 요소로 설정해주어야 한다.
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="post item1">
+            <h2>Post Title 1</h2>
+            <p>Post Content 1</p>
+        </div>
+        <div class="post item2">
+            <h2>Post Title 2</h2>
+            <p>Post Content 2</p>
+        </div>
+        <div class="post item3">
+            <h2>Post Title 3</h2>
+            <p>Post Content 3</p>
+        </div>
+        <div class="post item4">
+            <h2>Post Title 4</h2>
+            <p>Post Content 4</p>
+        </div>
+    </div>
+</body>
+</html>
 ```
 
 ```css
-a,
-span,
-img{
-    border: 3px solid red;
+.container{
+    height: 500px;
+    border: 1px solid black;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+
+    /* align-content: flex-start; */
+    /* align-content: center; */
+    /* align-content: flex-end; */
+
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    /* align-items: flex-end; */
 }
-h1,
-p,
-div{
-    border: 1px solid blue;
+.post{
+    background-color: grey;
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.item1{
+    /* align-self: center; */
+}
+.item2{
+    /* align-self: flex-end; */
 }
 ```
 
-<img src="image/0221/0221_20.png" alt="image" align="center">
+#### 6. 목적에 따른 속성 분류
+
+1. 배치
+    1. flex-direction
+    2. flex-wrap
+2. 공간 분배
+    1. justify-content
+    2. align-content
+3. 정렬
+    1. align-items
+    2. align-self
+
+#### 7. 속성명 Tip
+
+- justify
+    - 주축
+- align
+    - 교차 축
+
+#### 8. justify-items 및 justify-self 속성이 없는 이유
+
+- 필요 없기 때문
+- margin auto를 통해 정렬 및 배치가 가능
+
+---
+
+### flex-wrap 응용
+
+#### 1. 반응형 레이아웃
+
+- 다양한 디바이스와 화면 크기에 자동으로 적응하여 콘텐츠를 최적으로 표시하는 웹 레이아웃 방식
+
+#### 2. 반응형 레이아웃 작성
+
+- flex-wrap을 사용해 반응형 레이아웃 작성
+    - flex-grow & flex-basis 활용
+    
+    <img src="image/0225/0225_26.png" alt="image" align="center">
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <div class="card">
+            <img class="thumbnail" src="images/sample.jpg" alt="sample">
+            <div class="content">
+                <h2>Heading</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis minus sed expedita ut nihil tempora
+                neque autem odio eos, repudiandae blanditiis, molestiae consequatur. Adipisci illo dolor repellat alias
+                maiores.
+                Aut?</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    ```
+    
+    ```css
+    .card{
+        width: 80%;
+        border: 1px solid black;
+        /* 1 */
+        display: flex;
+        /* 2 */
+        flex-wrap: wrap;
+    }
+    img{
+        width: 100%;
+    }
+    .thumbnail{
+        /* 3 */
+        flex-basis: 700px;
+        /* 4 */
+        flex-grow: 1;
+    }
+    .content{
+        /* 3 */
+        flex-basis: 350px;
+        /* 4 */
+        flex-grow: 1;
+    }
+    ```
+    
 
 ---
 
 ### 참고
 
-#### 1. 명시도 관련 문서
+#### 1. Margin Collapsing (마진 상쇄)
 
-- 그림으로 보는 명시도
-    - https://specifishity.com/
-- 명시도 계산기
-    - https://specificity.keegan.st/
+- 두 block 타입 요소의 martin top과 bottom이 만나 더 큰 margin으로 결합되는 현상
+- 좌우에는 적용되지 않음
+- 일관된 레이아웃 때문에 일부로 마진 상쇄를 발생시킴
+- 참고 자료
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
-#### 2. HTML 스타일 가이드
+<img src="image/0225/0225_27.png" alt="image" align="center">
 
-- 대소문자 구분
-    - HTML은 대소문자를 구분하지 않지만, 소문자 사용을 강력히 권장
-    - 태그명과 속성명 모두 소문자로 작성
-- 속성 따옴표
-    - 속성 값에는 큰 따옴표(”)를 사용하는 것이 일반적
-- 코드 구조와 포맷팅
-    - 일관된 들여쓰기를 사용 (보통 2칸 공백)
-    - 각 요소는 한 줄에 하나씩 작성
-    - 중첩된 요소는 한 단계 더 들여쓰기
-- 공백 처리
-    - HTML은 연속된 공백을 하나로 처리
-    - Enter키로 줄 바꿈을 해도 브라우저에서 인식하지 않음
-        - 줄 바꿈 태그를 사용해야 함
-- 에러 출력 없음
-    - HTML은 문법 오류가 있어도 별도의 에러 메시지를 출력하지 않음
+#### 2. 마진 상쇄 예시
 
-#### 3. CSS 스타일 가이드
+- 두 요소 모두 margin 20px이지만 실제 두 요소의 상/하 공간은 40이 아닌 20으로 상쇄
 
-- 코드 구조와 포맷팅
-    - 일관된 들여쓰기를 사용
-        - 보통 2칸 공백
-    - 선택자와 속성은 각각 새 줄에 작성
-    - 중괄호 앞에 공백 넣기
-    - 속성 뒤에는 콜론(:)과 공백 넣기
-    - 마지막 속성 뒤에는 세미콜론(;) 넣기
-- 선택자 사용
-    - class 선택자를 우선적으로 사용
-    - id, 요소 선택자 등은 가능한 피할 것
-        - 여러 선택자들과 함께 사용할 경우 우선순위 규칙에 따라 예기치 못한 스타일 규칙이 적용되어 전반적인 유지보수가 어려워지기 때문
-- 속성과 값
-    - 속성과 값은 소문자로 작성
-    - 0 값에는 단위를 붙이지 않음
-- 명명 규칙
-    - 클래스 이름은 의미 있고, 목적을 나타내는 이름을 사용
-    - 케밥 케이스(kebab-case)를 사용
-    - 약어보다는 전체 단어를 사용
-- CSS 적용 스타일
-    - 인라인(inline) 스타일은 되도록 사용하지 말 것
-        - CSS와 HTML 구조 정보가 혼합되어 작성되기 때문에 코드를 이해하기 어렵게 만듦
+<img src="image/0225/0225_28.png" alt="image" align="center">
 
-#### 4. MDN Web Docs
+---
 
-- Mozilla Developer Network에서 제공하는 온라인 문서로, 웹 개발자와 디자이너를 위한 종합적인 참고 자료
-- HTML, CSS, JavaScript, 웹 API, 개발 도구 등 웹 기술에 대한 정보를 제공
+### 박스 타입 별 수평 정렬
 
-#### 5. MDN 문서 특징
+#### 1. Block 요소의 수평 정렬
 
-1. 정확성 및 신뢰성
-    1. Mozilla와 웹 커뮤니티의 전문가들에 의해 작성되고 유지 관리
-    2. 웹 표준을 정확하게 반영하고 있으며, 신뢰할 수 있는 정보 소스를 제공
-2. 최신 웹 기술
-    1. 최신 웹 표준과 기술을 다루고 있어, 웹 개발자들이 최신 정보를 쉽게 접할 수 있음
-3. 명확한 설명과 예제
-    1. 복잡한 개념을 이해하기 쉽게 설명하고, 실습 가능한 예제 코드를 제공
+- margin: auto;
+    - 블록 요소의 너비를 지정하고 좌우 마진을 auto로 설정
+    
+    <img src="image/0225/0225_29.png" alt="image" align="center">
+    
+
+#### 2. Inline 요소의 수평 정렬
+
+- text-align
+    - 부모 요소에 적용
+    
+    <img src="image/0225/0225_30.png" alt="image" align="center">
+    
+
+#### 3. Inline-block 요소의 수평 정렬
+
+- text-align
+    - 부모 요소에 적용
+    
+    <img src="image/0225/0225_31.png" alt="image" align="center">
+    
+
+---
+
+### 실제 Position 활용 예시
+
+#### 1. 실제 Position 활용 예시
+
+- absolute
+
+<img src="image/0225/0225_32.png" alt="image" align="center">
+
+- fixed
+
+<img src="image/0225/0225_33.png" alt="image" align="center">
+
+- sticky
+
+<img src="image/0225/0225_34.png" alt="image" align="center">
+
+---
+
+### Flexbox Shorthand 속성
+
+#### 1. shorthand - “flex-flow”
+
+<img src="image/0225/0225_35.png" alt="image" align="center">
+
+#### 2. shorthand - “flex”
+
+<img src="image/0225/0225_36.png" alt="image" align="center">
+
+---
+
+### Flexbox 속성
+
+#### 1. Flexbox 속성 정리
+
+1. flex-direction
+    - row
+    
+    <img src="image/0225/0225_37.png" alt="image" align="center">
+    
+    - row-reverse
+    
+    <img src="image/0225/0225_38.png" alt="image" align="center">
+    
+
+- column
+
+<img src="image/0225/0225_39.png" alt="image" align="center">
+
+- column-reverse
+
+<img src="image/0225/0225_40.png" alt="image" align="center">
+
+1. flex-wrap
+    - wrap
+    
+    <img src="image/0225/0225_41.png" alt="image" align="center">
+    
+
+- nowrap
+
+<img src="image/0225/0225_42.png" alt="image" align="center">
+
+1. justify-content
+    - flex-start
+    
+    <img src="image/0225/0225_43.png" alt="image" align="center">
+    
+
+- flex-end
+
+<img src="image/0225/0225_44.png" alt="image" align="center">
+
+- center
+
+<img src="image/0225/0225_45.png" alt="image" align="center">
+
+- space-between
+
+<img src="image/0225/0225_46.png" alt="image" align="center">
+
+- space-around
+
+<img src="image/0225/0225_47.png" alt="image" align="center">
+
+- space-evenly
+
+<img src="image/0225/0225_48.png" alt="image" align="center">
+
+1. align-content
+    - flex-start
+    
+    <img src="image/0225/0225_49.png" alt="image" align="center">
+    
+
+- flex-end
+
+<img src="image/0225/0225_50.png" alt="image" align="center">
+
+- center
+
+<img src="image/0225/0225_51.png" alt="image" align="center">
+
+- space-between
+
+<img src="image/0225/0225_52.png" alt="image" align="center">
+
+- space-around
+
+<img src="image/0225/0225_53.png" alt="image" align="center">
+
+- space-evenly
+
+<img src="image/0225/0225_54.png" alt="image" align="center">
+
+1. align-items
+    - stretch
+    
+    <img src="image/0225/0225_55.png" alt="image" align="center">
+    
+
+- flex-start
+
+<img src="image/0225/0225_56.png" alt="image" align="center">
+
+- flex-end
+
+<img src="image/0225/0225_57.png" alt="image" align="center">
+
+- center
+
+<img src="image/0225/0225_58.png" alt="image" align="center">
+
+1. align-self
+    - stretch
+    
+    <img src="image/0225/0225_59.png" alt="image" align="center">
+    
+    - flex-start
+    
+    <img src="image/0225/0225_60.png" alt="image" align="center">
+    
+
+- flex-end
+
+<img src="image/0225/0225_61.png" alt="image" align="center">
+
+- center
+
+<img src="image/0225/0225_62.png" alt="image" align="center">
