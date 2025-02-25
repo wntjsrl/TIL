@@ -993,15 +993,14 @@ body{
 #### 1. Flexbox 속성 정리
 
 1. flex-direction
-    - row
-    
-    <img src="image/0225/0225_37.png" alt="image" align="center">
-    
-    - row-reverse
-    
-    <img src="image/0225/0225_38.png" alt="image" align="center">
-    
+- row
 
+<img src="image/0225/0225_37.png" alt="image" align="center">
+
+- row-reverse
+
+<img src="image/0225/0225_38.png" alt="image" align="center">
+    
 - column
 
 <img src="image/0225/0225_39.png" alt="image" align="center">
@@ -1011,20 +1010,18 @@ body{
 <img src="image/0225/0225_40.png" alt="image" align="center">
 
 1. flex-wrap
-    - wrap
-    
-    <img src="image/0225/0225_41.png" alt="image" align="center">
-    
+- wrap
+
+<img src="image/0225/0225_41.png" alt="image" align="center">
 
 - nowrap
 
 <img src="image/0225/0225_42.png" alt="image" align="center">
 
 1. justify-content
-    - flex-start
-    
-    <img src="image/0225/0225_43.png" alt="image" align="center">
-    
+- flex-start
+
+<img src="image/0225/0225_43.png" alt="image" align="center">
 
 - flex-end
 
@@ -1047,11 +1044,10 @@ body{
 <img src="image/0225/0225_48.png" alt="image" align="center">
 
 1. align-content
-    - flex-start
-    
-    <img src="image/0225/0225_49.png" alt="image" align="center">
-    
+- flex-start
 
+<img src="image/0225/0225_49.png" alt="image" align="center">
+    
 - flex-end
 
 <img src="image/0225/0225_50.png" alt="image" align="center">
@@ -1073,10 +1069,9 @@ body{
 <img src="image/0225/0225_54.png" alt="image" align="center">
 
 1. align-items
-    - stretch
-    
-    <img src="image/0225/0225_55.png" alt="image" align="center">
-    
+- stretch
+
+<img src="image/0225/0225_55.png" alt="image" align="center">
 
 - flex-start
 
@@ -1091,15 +1086,14 @@ body{
 <img src="image/0225/0225_58.png" alt="image" align="center">
 
 1. align-self
-    - stretch
-    
-    <img src="image/0225/0225_59.png" alt="image" align="center">
-    
-    - flex-start
-    
-    <img src="image/0225/0225_60.png" alt="image" align="center">
-    
+- stretch
 
+<img src="image/0225/0225_59.png" alt="image" align="center">
+
+- flex-start
+
+<img src="image/0225/0225_60.png" alt="image" align="center">
+    
 - flex-end
 
 <img src="image/0225/0225_61.png" alt="image" align="center">
