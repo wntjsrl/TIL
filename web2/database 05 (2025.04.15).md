@@ -42,7 +42,7 @@ class Reservation(models.Model):
         return f'{self.doctor.pk}번 의사의 {self.patient.pk}번 환자'
 ```
 
-#### 4. MS:N 관계 주요 사항
+#### 4. M:N 관계 주요 사항
 
 - M:N 관계로 맺어진 두 테이블에는 물리적인 변화가 없음
 - ManyToManyField는 중개 테이블을 자동으로 생성
