@@ -357,7 +357,7 @@ def profile(request, username):
 
 def follow(request, user_pk):
     # 팔로우 할 상대방 조회
-    User= get_user_model()
+    User = get_user_model()
     you = User.objects.get(pk=user_pk)
     me = request.user
 
