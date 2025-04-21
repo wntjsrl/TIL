@@ -1,4 +1,4 @@
-## Javascript 01 (2025.04.21)
+## JavaScript 01 (2025.04.21)
 
 ### ECMAScript
 
