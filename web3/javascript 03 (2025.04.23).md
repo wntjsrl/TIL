@@ -146,7 +146,7 @@ const myObj3 = {
 
 - JavaScript의 함수는 호출될 때 this를 암묵적으로 전달 받음
 - JavaScript에서 this는 함수가 “호출되는 방식”에 따라 결정되는 현재 객체를 나타냄
-- Python의 self와 Java의 this가 선언 시 이미 값이 정해지는 것에 비해 JavaScript의 this는 함수가 호출되기 전까지 값이 할당되지 않고, 호출 시 에 결정됨 (동적 할당)
+- Python의 self와 Java의 this가 선언 시 이미 값이 정해지는 것에 비해 JavaScript의 this는 함수가 호출되기 전까지 값이 할당되지 않고, 호출 시에 결정됨 (동적 할당)
 - this가 미리 정해지지 않고, 호출 방식에 의해 결정되는 것
     - 장점
         - 함수(메서드)를 하나만 만들어 여러 객체에서 재사용할 수 있음
