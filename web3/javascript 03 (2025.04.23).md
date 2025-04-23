@@ -236,7 +236,7 @@ const {firstName} = userInfo
 const {firstName, userId} = userInfo
 const {firstName, userId, email} = userInfo
 
-// Alice alice 123 alice123@gmail.com
+// Alice alice123 alice123@gmail.com
 console.log(firstName, userId, email)
 ```
 
