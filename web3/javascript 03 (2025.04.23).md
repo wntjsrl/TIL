@@ -395,7 +395,7 @@ console.log(typeof jsonToObj) // object
 
 #### 2. Array
 
-- 순서가 있는 데이터 집합을 저장한느 자료 구조
+- 순서가 있는 데이터 집합을 저장하는 자료 구조
 
 #### 3. 배열 구조
 
