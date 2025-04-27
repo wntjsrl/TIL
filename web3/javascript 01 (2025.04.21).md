@@ -603,7 +603,7 @@
         - Document Node
             - HTML 문서 전체를 나타내는 노드
         - Element Node
-            - HTML 요소를 나타내는 노드 (예를 들어 <p>)
+            - HTML 요소를 나타내는 노드 (예를 들어 \<p>)
         - Text Node
             - HTML 텍스트 (Element Node 내의 텍스트 컨텐츠를 나타냄)
         - Attribute Node
