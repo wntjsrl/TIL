@@ -122,7 +122,7 @@ REST_FRAMEWORK = {
 ```python
 # settings.py
 INSTALLED_APPS = [
-		...,
+    ...,
     'rest_framework.authtoken',
     ...,
 ]
