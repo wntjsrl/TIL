@@ -155,7 +155,7 @@ INSTALLED_APPS = [
 ```python
 # settings.py
 INSTALLED_APPS = [
-		...,
+    ...,
     'dj_rest_auth',
     ...,
 ]
@@ -166,9 +166,9 @@ INSTALLED_APPS = [
 from django.urls import path, include
 
 urlpatterns = [
-		...,
+    ...,
     path('accounts/', include('dj_rest_auth.urls')),
-		...,
+    ...,
 ]
 
 ```
@@ -190,7 +190,7 @@ urlpatterns = [
 ```python
 # settings.py
 INSTALLED_APPS = [
-		...,
+    ...,
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -202,7 +202,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
-		...,
+    ...,
     'allauth.account.middleware.AccountMiddleware',
     ...,
 ]
@@ -213,9 +213,9 @@ MIDDLEWARE = [
 from django.urls import path, include
 
 urlpatterns = [
-		...,
-		path('accounts/signup/', include('dj_rest_auth.registration.urls')),
-		...,
+    ...,
+    path('accounts/signup/', include('dj_rest_auth.registration.urls')),
+    ...,
 ]
 
 ```
