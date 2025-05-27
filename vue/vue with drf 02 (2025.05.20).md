@@ -66,7 +66,7 @@ REST_FRAMEWORK = {
 ```python
 from rest_framework.decorators import api_view
 
-from rest_framework.decorators import authenticataion_classes
+from rest_framework.decorators import authentication_classes
 from rest_framework.authentication import TokenAuthentication, BasicAuthentication
 
 @api_view(["GET", "POST"])
